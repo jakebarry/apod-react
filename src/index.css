@@ -52,6 +52,7 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 footer h2 {
@@ -86,7 +87,7 @@ footer button i {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top, #030615, rgba(255,255,255,0));
+  background: linear-gradient(to top, #030615, rgba(255, 255, 255, 0));
 }
 
 .sidebar {
@@ -116,15 +117,15 @@ footer button i {
   width: 80%;
   max-width: 800px;
   margin-left: auto;
-  background:#030615;
-  
+  background: #030615;
+
 }
 
 .sidebarContents div {
   flex: 1;
 }
 
-.sidebarContents button{
+.sidebarContents button {
   background: transparent;
   color: white;
   border: none;
@@ -132,7 +133,23 @@ footer button i {
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
+}
+
+.sidebarContents h2 {
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 200;
 }
 
 .sidebarContents button:hover {
@@ -156,5 +173,28 @@ footer button i {
     right: 0;
     left: unset;
     width: 100vw;
+  }
+
+  .loadingState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .loadingState i {
+    font-size: 3rem;
+    opacity: 0.2;
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

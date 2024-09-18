@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Main = () => {
+const Main = (props) => {
+    const {data} = props
     return (
         <div className='imageContainer'>
             <img
-                src='nasa_moon.jpeg'
-                alt='Nasa image of the moon'
+                src={data?.hdurl}
+                alt={data?.title || 'bg-image'}
                 className='bgImage'
             >
 
