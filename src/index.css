@@ -40,7 +40,7 @@
 
 footer {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   display: flex;
@@ -53,15 +53,18 @@ footer div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin: auto;
 }
 
 footer h2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 footer h1 {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 200;
+  margin: auto;
+  /* text-align: center; */
 }
 
 footer button {
@@ -75,7 +78,20 @@ footer button {
 }
 
 footer button:hover {
-  opacity: 0.7;
+  opacity: 0.4;
+  animation: rotate 1s ease;
+}
+
+@keyframes rotate {
+  0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
 }
 
 footer button i {
@@ -134,7 +150,9 @@ footer button i {
   cursor: pointer;
   transition-duration: 200ms;
   padding: 1rem 0;
+  font-size: 2rem;
 }
+
 
 .sidebarContents h2 {
   font-weight: 200;
@@ -153,7 +171,7 @@ footer button i {
 }
 
 .sidebarContents button:hover {
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 @media (min-width: 640px) {
@@ -167,6 +185,7 @@ footer button i {
 
   .sidebarContents {
     margin: unset;
+    width: 100%;
   }
 
   .bgOverlay {
@@ -187,6 +206,71 @@ footer button i {
     opacity: 0.2;
     animation: spin 3s linear infinite;
   }
+
+
+  .arrow-button {
+    display: flex;
+    color: #C2FFE9;
+    background-color: #00E692;
+    padding: 10px 16px;
+    border-radius: 20px;
+    transition: all .3s ease;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    font-size: 30px;
+
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    margin-right: auto;
+    cursor: pointer;
+    transition-duration: 200ms;
+    padding: 3rem 0;
+    font-size: 2rem;
+}
+
+.arrow-button > .arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid ;
+    border-bottom: 2px solid ;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 6px;
+    transition: all .3s ease;
+}
+
+.arrow-button > .arrow::before {
+    display: block;
+    background-color: currentColor;
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+}
+
+.arrow-button:hover > .arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: text-hover-color;
+}
+
+.arrow-button:hover > .arrow::before {
+    opacity: 1;
+    width: 25px;
+}
+
+.arrow-button:hover {
+    /* background-color: #017A4F; */
+    color: #fff;
+}
 
   @keyframes spin {
     from {

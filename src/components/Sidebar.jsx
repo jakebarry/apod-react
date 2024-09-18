@@ -14,6 +14,9 @@ const Sidebar = (props) => {
                 <button onClick={handleToggleModal}>
                     <i className="fa-solid fa-arrow-right"></i>
                 </button>
+                {/* <button onClick={handleToggleModal} class="arrow-button">
+                    <span class="arrow"></span>
+                </button> */}
             </div>
         </div>
     )
