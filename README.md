@@ -34,9 +34,11 @@ A simple React application that displays the Astronomy Picture of the Day (APOD)
 
 ## Technologies Used
 
+- JavaScript
+- HTML
+- CSS
 - React
 - Vite
-- CSS
 
 ## Acknowledgements
 
