@@ -8,6 +8,10 @@ A simple React application that displays the Astronomy Picture of the Day (APOD)
 - Fetches data from the NASA APOD API
 - Responsive design for various devices
 
+## Live Demo
+
+Check out the live application [here](https://nasa-apod-jb.netlify.app).
+
 ## Installation
 
 1. Clone the repository:
@@ -47,10 +51,6 @@ I would like to thank the following YouTube video that helped me get started wit
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have suggestions for improvements.
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Author
 
